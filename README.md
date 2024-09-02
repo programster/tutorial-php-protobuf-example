@@ -7,6 +7,8 @@ was non-generated from the proto file, or from packages), is a single index.php 
 
 
 ## Getting Started
+
+### Generate Protobuf Types
 In order to use this codebase, you will need to have the protobuf compiler, for it to generate the types from the .proto file in the codebase.
 
 On Debian/Ubuntu, you will probably be able to install this by running:
@@ -23,7 +25,16 @@ protoc \
   MyApplication.proto
 ```
 
-Then you can run the code using the built-in webserver with:
+### Install Packages
+Install the requires packages using composer ([installation tutorial](https://blog.programster.org/ubuntu-install-composer)) by navigating to the `src/` directory and running:
+
+```bash
+composer install
+```
+
+### Run The Codebase
+
+Now you can run the code using the built-in webserver with:
 
 ```bash
 php -S localhost:8080 index.php
